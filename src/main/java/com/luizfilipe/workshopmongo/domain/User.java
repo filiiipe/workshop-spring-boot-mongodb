@@ -1,7 +1,7 @@
 package com.luizfilipe.workshopmongo.domain;
 
+import com.luizfilipe.workshopmongo.dto.AuthorDTO;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.annotation.Collation;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -50,7 +50,7 @@ public class User implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
+        if (!(o instanceof AuthorDTO user)) return false;
         return Objects.equals(getId(), user.getId());
     }
 
